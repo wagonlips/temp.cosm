@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<title>canvas baby</title>
+<script type="text/javascript">
+  function draw(){
+    var canvas = document.getElementById('tutorial');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+// Bezier curves example
+ctx.beginPath();
+ctx.moveTo(75,40);
+ctx.bezierCurveTo(75,37,70,25,50,25);
+ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+ctx.bezierCurveTo(20,80,40,102,75,120);
+ctx.bezierCurveTo(110,102,130,80,130,62.5);
+ctx.bezierCurveTo(130,62.5,130,25,100,25);
+ctx.bezierCurveTo(85,25,75,37,75,40);
+ctx.fillStyle = "rgb(200,0,0)";
+ctx.fill();
+var imgp = new Image();
+imgp.src = 'images/Canvas_createpattern.png'; // Set source path
+imgp.onload = function() {
+    var ptrn = ctx.createPattern(imgp,'repeat');
+    ctx.fillStyle = ptrn;
+    ctx.fillRect(0,0,750,650);
+
+}
+var img = new Image();   // Create new Image object
+img.onload = function(){
+      ctx.drawImage(img,50,85);
+      ctx.beginPath();
+      ctx.moveTo(100,236);
+      ctx.lineTo(120,166);
+      ctx.lineTo(138,239);
+      ctx.lineTo(170,15);
+      ctx.stroke();
+}
+img.src = 'images/4-cute-puppies-wallpaper-640x480.jpg'; // Set source path
+  }
+}
+</script>
+<style type="text/css">
+  canvas { 
+border: 1px solid black; 
+margin:0 auto;
+text-align:center;
+width:750px;
+}
+#container {
+  width:100%;
+}
+</style>
+</head>
+<body onload="draw();">
+<div id="container">
+<canvas id="tutorial" width="750" height="650">
+  <img src="http://www.toplessrobot.com/lgph0223%2Bkitten-in-a-bag-keith-kimberlin-poster.jpg" width="303" height="303" alt="kitten" />
+</canvas> 
+</div>
+</body>
+</html>

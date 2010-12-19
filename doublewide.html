@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Double Wide</title>
+<!--[if lt IE 9]>
+<script>
+  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+    "progress,section,time,video").split(',');
+  for (var i = 0; i < e.length; i++) {
+    document.createElement(e[i]);
+  }
+</script>
+<![endif]-->
+<script>
+function getElementsByClass( searchClass, domNode, tagName) { 
+  if (domNode == null) domNode = document;
+  if (tagName == null) tagName = '*';
+  var el = new Array();
+  var tags = domNode.getElementsByTagName(tagName);
+  var tcl = " "+searchClass+" ";
+  for(i=0,j=0; i<tags.length; i++) { 
+    var test = " " + tags[i].className + " ";
+    if (test.indexOf(tcl) != -1) 
+      el[j++] = tags[i];
+  } 
+  return el;
+} 
+</script>
+<link rel="stylesheet" href="/css/style.css" />
+<script src="/js/jquery-1.4.4.min.js"></script>
+<script>
+  $(document).onload(function() {
+    var mywidth = ("window", $(window).width()); 
+    var myheight = ("window", $(window).height()); 
+  });
+  $(document).ready(function() {
+    alert(mywidth);
+    var mystyle = "booby";
+  });
+</script>
+<style type="text/css">
+.mystyle { color:green; }
+</style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li>Link 1</li>
+    <li>Link 2</li>
+    <li>Link 3</li>
+    <li>Link 4</li>
+  </ul>
+</nav>
+<header>
+  <h1>Merry Xmas!</h1>
+</header>
+<div id="content">
+  <section id="first">
+    <article>
+      <h2>Hello here's the intro</h2>
+      <p class="caption">This text will tell you how it's gonna' be.</p>
+    </article>
+  </section>
+  <section id="second">
+    <article>
+      <h2>Amusing Xmas Video #1</h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+  <section id="third">
+    <article>
+      <h2>Amusing Xmas Video #2</h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+  <section id="fourth">
+    <article>
+      <h2>Amusing Xmas Video #3</h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+  <section id="fifth">
+    <article>
+      <h2>Amusing Xmas Video #4</h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+</div>
+<footer>
+</footer>
+<script>//$('section').addClass("mystyle");</script>
+<script>
+  //document.getElementById('first').style.color = 'red';
+  function getElements() {
+    var elements = document.getElementsByTagName('h2');
+    var num = elements.length;
+    var myElement = elements.item(0);
+    alert("Look " + myElement + " baby.");
+  }
+  /*
+  $(document).ready(function() {
+    var myColor = $('div#content').css({color:'red'});
+  }
+  */
+</script>
+<button onclick="getElements();">SHOW ME</button>
+</body>
+</html>
