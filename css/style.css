@@ -28,7 +28,9 @@ time, mark, audio, video {
 }
 
 nav, header, #content, footer {
-    width:
+    width:8192px;
+}
+
 body {
     line-height:1;
 }
@@ -41,6 +43,11 @@ footer,header,hgroup,menu,nav,section {
 nav ul {
     list-style:none;
 }
+
+nav li {
+    display:inline;
+}
+
 
 blockquote, q {
     quotes:none;
@@ -105,4 +112,25 @@ input, select {
 /****
     end reset 
             *****/
+nav {
+    border:1px solid orange;
+}
+
+header {
+    border:1px solid blue;
+}
+
+#mycontent {
+    width:100%;
+    border:1px solid green;
+}
+
+section {
+    float:left;
+    border:1px solid pink;
+}
+
+footer {
+    border:1px solid red;
+}
 
