@@ -14,6 +14,20 @@
 </script>
 <![endif]-->
 <script>
+  //document.getElementById('first').style.color = 'red';
+  function getElements() {
+    var elements = document.getElementsByTagName('h2');
+    var num = elements.length;
+    var myElement = elements.item(0);
+    alert("Look " + myElement + " baby.");
+  }
+  /*
+  $(document).ready(function() {
+    var myColor = $('div#mycontent').css({color:'red'});
+  }
+  */
+</script>
+<script>
 function getElementsByClass( searchClass, domNode, tagName) { 
   if (domNode == null) domNode = document;
   if (tagName == null) tagName = '*';
@@ -27,6 +41,8 @@ function getElementsByClass( searchClass, domNode, tagName) {
   } 
   return el;
 } 
+document.getElementsByClass('section');
+var myNum = getElementsByClass.length;
 </script>
 <link rel="stylesheet" href="/css/style.css" />
 <script src="/js/jquery-1.4.4.min.js"></script>
@@ -56,35 +72,35 @@ function getElementsByClass( searchClass, domNode, tagName) {
 <header>
   <h1>Merry Xmas!</h1>
 </header>
-<div id="content">
-  <section id="first">
+<div id="mycontent">
+  <section class="section" id="first">
     <article>
       <h2>Hello here's the intro</h2>
       <p class="caption">This text will tell you how it's gonna' be.</p>
     </article>
   </section>
-  <section id="second">
+  <section class="section" id="second">
     <article>
       <h2>Amusing Xmas Video #1</h2>
       <video></video>
       <p class="caption">Ho ho ho, that's a good one.</p>
     </article>
   </section>
-  <section id="third">
+  <section class="section" id="third">
     <article>
       <h2>Amusing Xmas Video #2</h2>
       <video></video>
       <p class="caption">Ho ho ho, that's a good one.</p>
     </article>
   </section>
-  <section id="fourth">
+  <section class="section" id="fourth">
     <article>
       <h2>Amusing Xmas Video #3</h2>
       <video></video>
       <p class="caption">Ho ho ho, that's a good one.</p>
     </article>
   </section>
-  <section id="fifth">
+  <section class="section" id="fifth">
     <article>
       <h2>Amusing Xmas Video #4</h2>
       <video></video>
@@ -95,20 +111,6 @@ function getElementsByClass( searchClass, domNode, tagName) {
 <footer>
 </footer>
 <script>//$('section').addClass("mystyle");</script>
-<script>
-  //document.getElementById('first').style.color = 'red';
-  function getElements() {
-    var elements = document.getElementsByTagName('h2');
-    var num = elements.length;
-    var myElement = elements.item(0);
-    alert("Look " + myElement + " baby.");
-  }
-  /*
-  $(document).ready(function() {
-    var myColor = $('div#content').css({color:'red'});
-  }
-  */
-</script>
-<button onclick="getElements();">SHOW ME</button>
+<button onclick="alert(num);">SHOW ME</button>
 </body>
 </html>
