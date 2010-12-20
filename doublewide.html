@@ -13,48 +13,17 @@
   }
 </script>
 <![endif]-->
-<script>
-  //document.getElementById('first').style.color = 'red';
-  function getElements() {
-    var elements = document.getElementsByTagName('h2');
-    var num = elements.length;
-    var myElement = elements.item(0);
-    alert("Look " + myElement + " baby.");
-  }
-  /*
-  $(document).ready(function() {
-    var myColor = $('div#mycontent').css({color:'red'});
-  }
-  */
-</script>
-<script>
-function getElementsByClass( searchClass, domNode, tagName) { 
-  if (domNode == null) domNode = document;
-  if (tagName == null) tagName = '*';
-  var el = new Array();
-  var tags = domNode.getElementsByTagName(tagName);
-  var tcl = " "+searchClass+" ";
-  for(i=0,j=0; i<tags.length; i++) { 
-    var test = " " + tags[i].className + " ";
-    if (test.indexOf(tcl) != -1) 
-      el[j++] = tags[i];
-  } 
-  return el;
-} 
-document.getElementsByClass('section');
-var myNum = getElementsByClass.length;
-</script>
 <link rel="stylesheet" href="/css/style.css" />
 <script src="/js/jquery-1.4.4.min.js"></script>
 <script>
-  $(document).onload(function() {
+  $(document).ready(function() {
     var mywidth = ("window", $(window).width()); 
     var myheight = ("window", $(window).height()); 
-  });
-  $(document).ready(function() {
+    $('section').css("width",mywidth);
     alert(mywidth);
-    var mystyle = "booby";
   });
+</script>
+<script>
 </script>
 <style type="text/css">
 .mystyle { color:green; }
@@ -111,6 +80,6 @@ var myNum = getElementsByClass.length;
 <footer>
 </footer>
 <script>//$('section').addClass("mystyle");</script>
-<button onclick="alert(num);">SHOW ME</button>
+<button onClick="alert(mywidth);">SHOW ME</button>
 </body>
 </html>
