@@ -17,19 +17,18 @@
 <script src="/js/jquery-1.4.4.min.js"></script>
 <script>
   $(document).ready(function() {
-    var mywidth = ("window", $(window).width()); 
+    var sectionwidth = ("window", $(window).width()); 
     var myheight = ("window", $(window).height()); 
-    $('section').css("width",mywidth);
-    alert(mywidth);
+    var totalwidth = ((sectionwidth+200)*5);
+    $('section').css("width",sectionwidth);
+    alert(sectionwidth);
+    alert(totalwidth);
   });
-  /*
   $(window).resize(function() {
-    var mywidth = ("window", $(window).width()); 
+    var sectionwidth = ("window", $(window).width()); 
     var myheight = ("window", $(window).height()); 
-    $('section').css("width",mywidth);
-    alert(mywidth);
+    $('section').css("width",sectionwidth);
   });
-  */
 </script>
 <script>
 </script>
@@ -87,7 +86,5 @@
 </div>
 <footer>
 </footer>
-<script>//$('section').addClass("mystyle");</script>
-<button onClick="alert(mywidth);">SHOW ME</button>
 </body>
 </html>
