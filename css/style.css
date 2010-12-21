@@ -41,14 +41,6 @@ footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
-nav ul {
-    list-style:none;
-}
-
-nav li {
-    display:inline;
-}
-
 
 blockquote, q {
     quotes:none;
@@ -114,7 +106,7 @@ input, select {
     end reset 
             *****/
 nav,header {
-    border:1px solid orange;
+    xborder:1px solid orange;
     width:300px;
     margin-left:300px;
     position:fixed;
@@ -122,31 +114,39 @@ nav,header {
 
 nav {
     margin-top:5px;
+    display:block;
+    overflow:hidden;
+}
+
+nav a {
+    float:left;
+    width:20%;
+    text-align:center;
 }
 
 header {
-    border:1px solid blue;
+    xborder:1px solid blue;
     margin-top:30px;
 }
 
 #mycontent {
     width:100%;
-    border:1px solid green;
+    xborder:1px solid green;
 }
 
 section {
     float:left;
-    border:1px solid pink;
+    xborder:1px solid pink;
     margin-right:200px;
     margin-top:75px;
 }
 
 h2 {
-    border:1px solid green;
+    xborder:1px solid green;
 }
 
 footer {
-    border:1px solid red;
+    xborder:1px solid red;
 }
 
 article {
