@@ -135,6 +135,10 @@ section {
     margin-right:200px;
 }
 
+h2 {
+    border:1px solid green;
+}
+
 footer {
     border:1px solid red;
 }
