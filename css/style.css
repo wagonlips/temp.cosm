@@ -28,11 +28,12 @@ time, mark, audio, video {
 }
 
 nav, header, #content, footer {
-    width:8192px;
+    width:100%;
 }
 
 body {
     line-height:1;
+    width:8192px;
 }
 
 article,aside,details,figcaption,figure,
@@ -128,9 +129,16 @@ header {
 section {
     float:left;
     border:1px solid pink;
+    margin-right:200px;
 }
 
 footer {
     border:1px solid red;
+}
+
+article {
+    margin:0 auto;
+    width:352px;
+    text-align:center;
 }
 

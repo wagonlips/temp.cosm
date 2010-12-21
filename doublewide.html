@@ -18,16 +18,17 @@
 <script>
   $(document).ready(function() {
     var sectionwidth = ("window", $(window).width()); 
-    var myheight = ("window", $(window).height()); 
     var totalwidth = ((sectionwidth+200)*5);
     $('section').css("width",sectionwidth);
+    $('body').css("width",totalwidth);
     alert(sectionwidth);
     alert(totalwidth);
   });
   $(window).resize(function() {
     var sectionwidth = ("window", $(window).width()); 
-    var myheight = ("window", $(window).height()); 
+    var totalwidth = ((sectionwidth+200)*5);
     $('section').css("width",sectionwidth);
+    $('body').css("width",totalwidth);
   });
 </script>
 <script>
