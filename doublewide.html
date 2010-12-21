@@ -19,26 +19,32 @@
   $(document).ready(function() {
     var sectionwidth = ("window", $(window).width()); 
     var totalwidth = ((sectionwidth+200)*5);
+    var navmargin = ((sectionwidth/2)-150);
     $('section').css("width",sectionwidth);
     $('body').css("width",totalwidth);
+    $('nav').css("margin-left",navmargin);
     alert(sectionwidth);
     alert(totalwidth);
+    alert(navmargin);
   });
   $(window).resize(function() {
     var sectionwidth = ("window", $(window).width()); 
     var totalwidth = ((sectionwidth+200)*5);
+    var navmargin = ((sectionwidth/2)-150);
     $('section').css("width",sectionwidth);
     $('body').css("width",totalwidth);
+    $('nav').css("margin-left",navmargin);
   });
 </script>
 </head>
 <body>
 <nav>
   <ul>
-    <li>Link 1</li>
-    <li>Link 2</li>
-    <li>Link 3</li>
-    <li>Link 4</li>
+    <li><a href="#first">Home</a></li>
+    <li><a href="#second">Link 1</a></li>
+    <li><a href="#third">Link 2</a></li>
+    <li><a href="#fourth">Link 3</a></li>
+    <li><a href="#fifth">Link 4</a></li>
   </ul>
 </nav>
 <header>

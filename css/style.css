@@ -27,7 +27,7 @@ time, mark, audio, video {
     background:transparent;
 }
 
-nav, header, #content, footer {
+header, #content, footer {
     width:100%;
 }
 
@@ -115,6 +115,9 @@ input, select {
             *****/
 nav {
     border:1px solid orange;
+    width:300px;
+    margin-left:300px;
+    position:fixed;
 }
 
 header {
