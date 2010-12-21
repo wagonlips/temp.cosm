@@ -23,6 +23,7 @@
     $('section').css("width",sectionwidth);
     $('body').css("width",totalwidth);
     $('nav').css("margin-left",navmargin);
+    $('header').css("margin-left",navmargin);
     alert(sectionwidth);
     alert(totalwidth);
     alert(navmargin);
@@ -34,10 +35,14 @@
     $('section').css("width",sectionwidth);
     $('body').css("width",totalwidth);
     $('nav').css("margin-left",navmargin);
+    $('header').css("margin-left",navmargin);
   });
 </script>
 </head>
 <body>
+<header>
+  <h1>Merry Xmas!</h1>
+</header>
 <nav>
   <ul>
     <li><a href="#first">Home</a></li>
@@ -47,9 +52,6 @@
     <li><a href="#fifth">Link 4</a></li>
   </ul>
 </nav>
-<header>
-  <h1>Merry Xmas!</h1>
-</header>
 <div id="mycontent">
   <section class="section" id="first">
     <article>
@@ -66,7 +68,7 @@
   </section>
   <section class="section" id="third">
     <article>
-      <h2>< name="third">Amusing Xmas Video #2</a></h2>
+      <h2><a name="third">Amusing Xmas Video #2</a></h2>
       <video></video>
       <p class="caption">Ho ho ho, that's a good one.</p>
     </article>
