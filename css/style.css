@@ -34,7 +34,9 @@ header, #content, footer {
 body {
     line-height:1;
     width:8192px;
-    background-image:url('/images/texture02.png');
+    background-image:url('/images/snowflakes-background.png');
+    background-repeat:repeat-x;
+    background-color:#38C5F3;
 }
 
 article,aside,details,figcaption,figure,
