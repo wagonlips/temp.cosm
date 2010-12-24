@@ -34,6 +34,7 @@ header, #content, footer {
 body {
     line-height:1;
     width:8192px;
+    background-image:url('/images/texture02.png');
 }
 
 article,aside,details,figcaption,figure,
