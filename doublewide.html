@@ -20,12 +20,13 @@
 <script>
   $(document).ready(function() {
     var sectionwidth = ("window", $(window).width()); 
-    var totalwidth = ((sectionwidth+200)*5);
-    var navmargin = ((sectionwidth/2)-150);
+    var totalwidth = ((sectionwidth+200)*6);
+    var navmargin = ((sectionwidth/2)-250);
     $('section').css("width",sectionwidth);
     $('body').css("width",totalwidth);
     $('nav').css("margin-left",navmargin);
     $('header').css("margin-left",navmargin);
+    $('#bottom_image').css("width",totalwidth);
     //alert(sectionwidth);
     //alert(totalwidth);
     //alert(navmargin);
@@ -34,12 +35,13 @@
   });
   $(window).resize(function() {
     var sectionwidth = ("window", $(window).width()); 
-    var totalwidth = ((sectionwidth+200)*5);
-    var navmargin = ((sectionwidth/2)-150);
+    var totalwidth = ((sectionwidth+200)*6);
+    var navmargin = ((sectionwidth/2)-250);
     $('section').css("width",sectionwidth);
     $('body').css("width",totalwidth);
     $('nav').css("margin-left",navmargin);
     $('header').css("margin-left",navmargin);
+    $('#bottom_image').css("width",totalwidth);
   });
 </script>
 </head>
@@ -59,6 +61,7 @@
   <a href="#second">Link 2</a>
   <a href="#third">Link 3</a>
   <a href="#fourth">Link 4</a>
+  <a href="#fifth">Link 5</a>
 </nav>
 <div id="mycontent">
   <section class="section" id="home">
@@ -95,13 +98,16 @@
       <p class="caption">Ho ho ho, that's a good one.</p>
     </article>
   </section>
+  <section class="section" id="fifth">
+    <article>
+      <h2><a name="fourth">Amusing Xmas Video #4</a></h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
 </div>
 <footer>
-  <audio controls preload="auto" autobuffer> 
-    <source src="/audio/101222wtf-rudolph-the-red-n.ogg" />
-    <source src="/audio/101222wtf-rudolph-the-red-n.mp3" />
-    <source src="/audio/101222wtf-rudolph-the-red-n.wav" />
-  </audio>
 </footer>
+<div id="bottom_image">&nbsp;</div>
 </body>
 </html>
