@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Line</title>
+<script>
+function draw_line() {
+ 
+  var canvasObj = document.getElementById("mycanvas");
+  var canvasCtx = canvasObj.getContext("2d");
+  canvasCtx.moveTo(0, 0);
+  canvasCtx.lineTo(200,200); 
+  canvasCtx.stroke();
+}
+function draw_image() {
+ 
+  var canvasObj = document.getElementById("mycanvas");
+  var canvasCtx = canvasObj.getContext("2d");
+  var img = new Image();
+  img.onload = function() {
+       canvasCtx.drawImage(img,0,0);
+       canvasCtx.drawImage(img,300,0,100,75);   
+       canvasCtx.drawImage(img,5,5,90,30,420,0,85,25);
+   }
+  img.src = "images/sun.png";
+  
+  
+}
+function clear_canvas() {
+  var canvasObj = document.getElementById("mycanvas");
+  var canvasCtx = canvasObj.getContext("2d");
+         canvasCtx.clearRect(0,0,200,200);
+}
+</script>
+</head>
+<body>
+    <div id="instructions">
+     <a href="#" onclick="draw_line();return false">Click to draw a line</a>
+     <a href="#" onclick="draw_image();return false">Click to draw an image</a>
+     <a href="#" onclick="clear_canvas();return false">Click to clear</a>
+    </div>
+ <div id="drawingsurface">
+  <canvas id="mycanvas" width="200" height="200"/>
+    <p>Oh my goodness! You are using a browser that can't do HTML 5!</p>
+    <p>Go <a href="http://www.mozilla.com/en-US/firefox/personal.html">here</a>, <a href="http://www.apple.com/safari/">here</a>, <a href="http://www.opera.com/products/">here</a>, or <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie-9/home">here</a> to fix that right now!</p>
+  </canvas>
+ </div>
+</body>
+</html>

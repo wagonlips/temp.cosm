@@ -1,49 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Canvas Line</title>
+<title>Double Wide</title>
+<!--[if lt IE 9]>
 <script>
-function draw_line() {
- 
-  var canvasObj = document.getElementById("mycanvas");
-  var canvasCtx = canvasObj.getContext("2d");
-  canvasCtx.moveTo(0, 0);
-  canvasCtx.lineTo(200,200); 
-  canvasCtx.stroke();
-}
-function draw_image() {
- 
-  var canvasObj = document.getElementById("mycanvas");
-  var canvasCtx = canvasObj.getContext("2d");
-  var img = new Image();
-  img.onload = function() {
-       canvasCtx.drawImage(img,0,0);
-       canvasCtx.drawImage(img,300,0,100,75);   
-       canvasCtx.drawImage(img,5,5,90,30,420,0,85,25);
-   }
-  img.src = "images/sun.png";
-  
-  
-}
-function clear_canvas() {
-  var canvasObj = document.getElementById("mycanvas");
-  var canvasCtx = canvasObj.getContext("2d");
-         canvasCtx.clearRect(0,0,200,200);
-}
+  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+    "progress,section,time,video").split(',');
+  for (var i = 0; i < e.length; i++) {
+    document.createElement(e[i]);
+  }
 </script>
+<![endif]-->
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/jquery-1.4.4.min.js"></script>
+<script src="js/jquery.localscroll-1.2.7-min.js"></script>
+<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+<script>
+  $(document).ready(function() {
+    var sectionwidth = ("window", $(window).width()); 
+    var totalwidth = ((sectionwidth+200)*6);
+    var navmargin = ((sectionwidth/2)-250);
+    $('section').css("width",sectionwidth);
+    $('body').css("width",totalwidth);
+    $('nav').css("margin-left",navmargin);
+    $('header').css("margin-left",navmargin);
+    $('#bottom_image').css("width",totalwidth);
+    //alert(sectionwidth);
+    //alert(totalwidth);
+    //alert(navmargin);
+    $.localScroll.defaults.axis = 'x';
+    $.localScroll();
+  });
+  $(window).resize(function() {
+    var sectionwidth = ("window", $(window).width()); 
+    var totalwidth = ((sectionwidth+200)*6);
+    var navmargin = ((sectionwidth/2)-250);
+    $('section').css("width",sectionwidth);
+    $('body').css("width",totalwidth);
+    $('nav').css("margin-left",navmargin);
+    $('header').css("margin-left",navmargin);
+    $('#bottom_image').css("width",totalwidth);
+  });
+</script>
+<script type="text/javascript" src="http://use.typekit.com/tyz7wlg.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-    <div id="instructions">
-     <a href="#" onclick="draw_line();return false">Click to draw a line</a>
-     <a href="#" onclick="draw_image();return false">Click to draw an image</a>
-     <a href="#" onclick="clear_canvas();return false">Click to clear</a>
-    </div>
- <div id="drawingsurface">
-  <canvas id="mycanvas" width="200" height="200"/>
-    <p>Oh my goodness! You are using a browser that can't do HTML 5!</p>
-    <p>Go <a href="http://www.mozilla.com/en-US/firefox/personal.html">here</a>, <a href="http://www.apple.com/safari/">here</a>, <a href="http://www.opera.com/products/">here</a>, or <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie-9/home">here</a> to fix that right now!</p>
-  </canvas>
- </div>
+<noscript>
+  <div id="noscript" style="position:fixed;top:100px;left:300px;background:#f6b6b6;border:5px solid #F00;color:#000;width:500px;padding:50px;z-index:9999;">You simply must have javascript on to view this site. Turn it on and reload.</div>
+</noscript>
+<!--[if lte IE 7]>
+  <div id="noscript" style="position:fixed;top:100px;left:300px;background:#f6b6b6;border:5px solid #F00;color:#000;width:500px;padding:50px;z-index:9999;">You simply must have a proper browser to view this site. Go here <a href="http://www.mozilla.com/en-US/firefox/">here,</a> <a href="http://www.google.com/chrome/">here,</a> <a href="http://www.apple.com/safari/">here,</a> <a href="http://www.opera.com/">here,</a> or  <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">here</a> and get one.</div>
+<![endif]-->
+<header>
+  <h1>Merry Xmas!</h1>
+</header>
+<nav>
+  <a href="#home"><img src="images/home-icon.png" width="60" height="60" alt="Home" title="Home" /></a>
+  <a href="#first"><img src="images/number-icon-1.png" width="60" height="60" alt="The First Video" title="The First Video" /></a>
+  <a href="#second"><img src="images/number-icon-2.png" width="60" height="60" alt="The Second Video" title="The Second Video" /></a>
+  <a href="#third"><img src="images/number-icon-3.png" width="60" height="60" alt="The Third Video" title="The Third Video" /></a>
+  <a href="#fourth"><img src="images/number-icon-4.png" width="60" height="60" alt="The Fourth Video" title="The Fourth Video" /></a>
+  <a href="#fifth"><img src="images/number-icon-5.png" width="60" height="60" alt="The Fifth Video" title="The Fifth Video" /></a>
+</nav>
+<div id="mycontent">
+  <section class="section" id="home">
+    <article>
+      <h2><a name="home">Hello here's the intro</a></h2>
+      <p class="caption">This text will tell you how it's gonna' be.</p>
+    </article>
+  </section>
+  <section class="section" id="first">
+    <article>
+      <h2><a name="first">Amusing Xmas Video #1</a></h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+  <section class="section" id="second">
+    <article>
+      <h2><a name="second">Amusing Xmas Video #2</a></h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+  <section class="section" id="third">
+    <article>
+      <h2><a name="third">Amusing Xmas Video #3</a></h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+  <section class="section" id="fourth">
+    <article>
+      <h2><a name="fourth">Amusing Xmas Video #4</a></h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+  <section class="section" id="fifth">
+    <article>
+      <h2><a name="fourth">Amusing Xmas Video #4</a></h2>
+      <video></video>
+      <p class="caption">Ho ho ho, that's a good one.</p>
+    </article>
+  </section>
+</div>
+<footer>
+</footer>
+<div id="bottom_image">&nbsp;</div>
 </body>
 </html>
