@@ -239,7 +239,7 @@ article {
 .tooshort {
     position:fixed;
     display:none;
-    top:100px;
+    top:50px;
     left:300px;
     background:#f6b6b6;
     border:5px solid #F00;
