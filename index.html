@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Double Wide</title>
+<title>Merry Xmas 2010</title>
 <!--[if lt IE 9]>
 <script>
   var e = ("abbr,article,aside,audio,canvas,datalist,details," +
@@ -18,31 +18,55 @@
 <script src="js/jquery.localscroll-1.2.7-min.js"></script>
 <script src="js/jquery.scrollTo-1.4.2-min.js"></script>
 <script>
-  $(document).ready(function() {
-    var sectionwidth = ("window", $(window).width()); 
-    var totalwidth = ((sectionwidth+200)*6);
-    var navmargin = ((sectionwidth/2)-250);
-    $('section').css("width",sectionwidth);
-    $('body').css("width",totalwidth);
-    $('nav').css("margin-left",navmargin);
-    $('header').css("margin-left",navmargin);
-    $('#bottom_image').css("width",totalwidth);
-    //alert(sectionwidth);
-    //alert(totalwidth);
-    //alert(navmargin);
-    $.localScroll.defaults.axis = 'x';
-    $.localScroll();
+$(document).ready(function() {
+  var sectionwidth = ("window", $(window).width()); 
+  var totalwidth = ((sectionwidth+200)*6);
+  var navmargin = ((sectionwidth/2)-250);
+  $('section').css("width",sectionwidth);
+  $('body').css("width",totalwidth);
+  $('nav').css("margin-left",navmargin);
+  $('header').css("margin-left",navmargin);
+  $('#bottom_image').css("width",totalwidth);
+  $('.gallery').css("width",sectionwidth);
+  $('.typekit-badge').css("padding-left",(totalwidth-300));
+  $('.typekit-badge').css("position","absolute");
+  $('.typekit-badge').css("left",0);
+  //alert(sectionwidth);
+  //alert(totalwidth);
+  //alert(navmargin);
+  $.localScroll.defaults.axis = 'x';
+  $.localScroll();
+  $(".tab_content").hide(); //Hide all content
+  $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+  $(".tab_content:first").show(); //Show first tab content
+});
+
+$(document).ready(function() {
+  //On Click Event
+  $("div#tabs ul li").click(function() {
+
+    $("div#tabs ul li").removeClass("active"); //Remove any "active" class
+    $(this).addClass("active"); //Add "active" class to selected tab
+    $(".tab_content").hide(); //Hide all tab content
+
+    var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+    $(activeTab).fadeIn(); //Fade in the active ID content
+    return false;
   });
-  $(window).resize(function() {
-    var sectionwidth = ("window", $(window).width()); 
-    var totalwidth = ((sectionwidth+200)*6);
-    var navmargin = ((sectionwidth/2)-250);
-    $('section').css("width",sectionwidth);
-    $('body').css("width",totalwidth);
-    $('nav').css("margin-left",navmargin);
-    $('header').css("margin-left",navmargin);
-    $('#bottom_image').css("width",totalwidth);
-  });
+
+});
+$(window).resize(function() {
+  /*
+  var sectionwidth = ("window", $(window).width()); 
+  var totalwidth = ((sectionwidth+200)*6);
+  var navmargin = ((sectionwidth/2)-250);
+  $('section').css("width",sectionwidth);
+  $('body').css("width",totalwidth);
+  $('nav').css("margin-left",navmargin);
+  $('header').css("margin-left",navmargin);
+  $('#bottom_image').css("width",totalwidth);
+  */
+});
 </script>
 <script type="text/javascript" src="http://use.typekit.com/tyz7wlg.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -59,16 +83,34 @@
 </header>
 <nav>
   <a href="#home"><img src="images/home-icon.png" width="60" height="60" alt="Home" title="Home" /></a>
-  <a href="#first"><img src="images/number-icon-1.png" width="60" height="60" alt="The First Video" title="The First Video" /></a>
-  <a href="#second"><img src="images/number-icon-2.png" width="60" height="60" alt="The Second Video" title="The Second Video" /></a>
-  <a href="#third"><img src="images/number-icon-3.png" width="60" height="60" alt="The Third Video" title="The Third Video" /></a>
-  <a href="#fourth"><img src="images/number-icon-4.png" width="60" height="60" alt="The Fourth Video" title="The Fourth Video" /></a>
-  <a href="#fifth"><img src="images/number-icon-5.png" width="60" height="60" alt="The Fifth Video" title="The Fifth Video" /></a>
+  <a href="#first" title="The First Video"><span>1<sup>st</sup></span></a>
+  <a href="#second" title="The Second Video"><span>2<sup>nd</sup></span></a>
+  <a href="#third" title="The Third Video"><span>3<sup>rd</sup></span></a>
+  <a href="#fourth" title="The Fourth Video"><span>4<sup>th</sup></span></a>
+  <a href="#fifth" title="The Fifth Video"><span>5<sup>th</sup></span></a>
 </nav>
 <div id="mycontent">
   <section class="section" id="home">
     <article>
       <h2><a name="home">Hello here's the intro</a></h2>
+      <div class="gallery">
+        <div id="tabs">
+          <ul class="tabs">
+            <li><a href="#tabs-1">1st image</a></li>
+            <li><a href="#tabs-2">2nd image</a></li>
+            <li><a href="#tabs-3">3rd image</a></li>
+          </ul>
+          <div id="tabs-1" class="tab_content">
+            <img src="images/2010-12-21_10.13.21.png" width="800" height="300" alt="mmm..." title="mmm..." />
+          </div>
+          <div id="tabs-2" class="tab_content">
+            <img src="images/2010-12-21_10.32.19.png" width="800" height="300" alt="mmm..." title="mmm..." />
+          </div>
+          <div id="tabs-3" class="tab_content">
+            <img src="images/2010-12-21_10.41.25.png" width="800" height="300" alt="mmm..." title="mmm..." />
+          </div>
+        </div><!-- /tabs -->
+      </div>
       <p class="caption">This text will tell you how it's gonna' be.</p>
     </article>
   </section>

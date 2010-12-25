@@ -37,6 +37,7 @@ body {
     background-image:url('../images/snowflakes-background.png');
     background-repeat:repeat-x;
     background-color:#38C5F3;
+    font-family:arial,helvetica;
 }
 
 article,aside,details,figcaption,figure,
@@ -115,7 +116,7 @@ nav,header {
 }
 
 nav {
-    margin-top:5px;
+    margin-top:50px;
     display:block;
     overflow:hidden;
     padding:10px 0;
@@ -135,9 +136,20 @@ nav a img {
     xborder:1px solid green;
 }
 
+nav a span {
+    padding-top:50px;
+    border:1px solid green;
+}
+
 header {
     xborder:1px solid blue;
-    margin-top:30px;
+    margin-top:10px;
+}
+
+header h1 {
+    font-size:5em;
+    color:#FFF;
+    text-align:center;
 }
 
 #mycontent {
@@ -149,7 +161,7 @@ section {
     float:left;
     xborder:1px solid pink;
     margin-right:200px;
-    margin-top:75px;
+    margin-top:150px;
 }
 
 h2 {
@@ -166,6 +178,10 @@ article {
     text-align:center;
 }
 
+#home article {
+    width:825px;
+}
+
 #bottom_image {
     background-image:url('../images/snowy-landscape.png');
     background-repeat:repeat-x;
@@ -174,5 +190,21 @@ article {
     left:0px;
     height:200px;
     width:100%;
+    z-index:-100;
 }
 
+.gallery {
+    xborder:1px solid pink;
+    position:absolute;
+    left:0;
+}
+
+#tabs ul {
+    height:30px;
+    padding:25px 0 0 0;
+}
+
+#tabs ul li {
+    display:inline;
+    padding:0 5px;
+}
