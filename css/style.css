@@ -176,6 +176,7 @@ section {
 
 h2 {
     xborder:1px solid green;
+    padding:5px 0;
 }
 
 footer {
@@ -218,3 +219,8 @@ article {
     display:inline;
     padding:0 5px;
 }
+
+#tabs ul li.active a {
+    text-decoration:none;
+}
+

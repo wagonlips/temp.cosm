@@ -68,8 +68,6 @@ $(window).resize(function() {
   */
 });
 </script>
-<script type="text/javascript" src="http://use.typekit.com/tyz7wlg.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 <noscript>
@@ -77,6 +75,8 @@ $(window).resize(function() {
 </noscript>
 <!--[if lte IE 7]>
   <div id="noscript" style="position:fixed;top:100px;left:300px;background:#f6b6b6;border:5px solid #F00;color:#000;width:500px;padding:50px;z-index:9999;">You simply must have a proper browser to view this site. Go here <a href="http://www.mozilla.com/en-US/firefox/">here,</a> <a href="http://www.google.com/chrome/">here,</a> <a href="http://www.apple.com/safari/">here,</a> <a href="http://www.opera.com/">here,</a> or  <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">here</a> and get one.</div>
+<script type="text/javascript" src="http://use.typekit.com/tyz7wlg.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <![endif]-->
 <header>
   <h1>Merry Xmas!</h1>
@@ -92,61 +92,128 @@ $(window).resize(function() {
 <div id="mycontent">
   <section class="section" id="home">
     <article>
-      <h2><a name="home">Hello here's the intro</a></h2>
+      <h2><a name="home">Merry Xmas from our family to yours.</a></h2>
       <div class="gallery">
         <div id="tabs">
           <ul class="tabs">
-            <li><a href="#tabs-1">1st image</a></li>
-            <li><a href="#tabs-2">2nd image</a></li>
-            <li><a href="#tabs-3">3rd image</a></li>
+            <li><a href="#tabs-1">Post Santa</a></li>
+            <li><a href="#tabs-2">Gingerbread House</a></li>
+            <li><a href="#tabs-3">A Cookie from Bebs</a></li>
+            <li><a href="#tabs-4">Handprints</a></li>
+            <li><a href="#tabs-5">Mittens</a></li>
+            <li><a href="#tabs-6">Daddy</a></li>
+            <li><a href="#tabs-7">Ladybug Raincoat</a></li>
           </ul>
           <div id="tabs-1" class="tab_content">
-            <img src="images/2010-12-21_10.13.21.png" width="800" height="300" alt="mmm..." title="mmm..." />
+            <img src="images/IMG_5281.jpg" width="800" height="300" alt="Daniela, Shannon, and Mommy" title="Daniela, Shannon, and Mommy" />
           </div>
           <div id="tabs-2" class="tab_content">
-            <img src="images/2010-12-21_10.32.19.png" width="800" height="300" alt="mmm..." title="mmm..." />
+            <img src="images/2010-12-15-16.11.54.jpg" width="800" height="300" alt="Daniela" title="Daniela" />
           </div>
           <div id="tabs-3" class="tab_content">
-            <img src="images/2010-12-21_10.41.25.png" width="800" height="300" alt="mmm..." title="mmm..." />
+            <img src="images/2010-12-20-14.38.18.jpg" width="800" height="300" alt="Shannon" title="Shannon" />
+          </div>
+          <div id="tabs-4" class="tab_content">
+            <img src="images/IMG_5325.jpg" width="800" height="300" alt="Daniela" title="Daniela" />
+          </div>
+          <div id="tabs-5" class="tab_content">
+            <img src="images/IMG_5252.jpg" width="800" height="300" alt="Shannon" title="Shannon" />
+          </div>
+          <div id="tabs-6" class="tab_content">
+            <img src="images/IMG_4787.jpg" width="800" height="300" alt="Daddy" title="Daddy" />
+          </div>
+          <div id="tabs-7" class="tab_content">
+            <img src="images/IMG_5260.jpg" width="800" height="300" alt="Shannon" title="Shannon" />
           </div>
         </div><!-- /tabs -->
       </div>
-      <p class="caption">This text will tell you how it's gonna' be.</p>
+      <p class="caption">Have a look at the pictures below, and then click the numbers above to see the videos.</p>
     </article>
   </section>
   <section class="section" id="first">
     <article>
-      <h2><a name="first">Amusing Xmas Video #1</a></h2>
-      <video></video>
-      <p class="caption">Ho ho ho, that's a good one.</p>
+      <h2><a name="first">Peter Pan's House</a></h2>
+      <!-- first try HTML5 playback: if serving as XML, expand `controls` to `controls="controls"` and autoplay likewise       -->
+      <!-- warning: playback does not work on iPad/iPhone if you include the poster attribute! fixed in iOS4.0                 -->
+      <video width="352" height="288" controls preload>
+        <!-- MP4 must be first for iPad! -->
+        <source src="video/video-2010-09-11-12-06-01.mp4" type="video/mp4" /><!-- WebKit video    -->
+        <source src="video/video-2010-09-11-12-06-01.ogv" type="video/ogg" /><!-- Firefox / Opera -->
+        <!-- fallback to Flash: -->
+        <object width="425" height="344" type="application/x-shockwave-flash" data="http://www.youtube.com/v/zqWMaBYvS9s">
+          <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+          <param name="movie" value="http://www.youtube.com/v/zqWMaBYvS9s" />
+          <param name="flashvars" value="controlbar=over&amp;image=video/video-2010-09-11-12-06-01.jpg&amp;file=video/video-2010-09-11-12-06-01.mp4" />
+          <!-- fallback image. note the title field below, put the title of the video there -->
+          <img src="video/video-2010-09-11-12-06-01.jpg" width="352" height="288" alt="Peter Pan's House"
+               title="No video playback capabilities, sorry about that." />
+        </object>
+      </video>
+      <p class="caption">Daniela explains: a house for Peter Pan<br />and the Lost Boys.</p>
     </article>
   </section>
   <section class="section" id="second">
     <article>
-      <h2><a name="second">Amusing Xmas Video #2</a></h2>
-      <video></video>
-      <p class="caption">Ho ho ho, that's a good one.</p>
+      <h2><a name="second">Must Be Santa</a></h2>
+      <video width="352" height="288" controls preload>
+        <source src="video/M2U01045_part2.mp4" type="video/mp4" /><!-- WebKit video    -->
+        <source src="video/M2U01045_part2.ogv" type="video/ogg" /><!-- Firefox / Opera -->
+        <object width="425" height="344" type="application/x-shockwave-flash" data="http://www.youtube.com/v/zqWMaBYvS9s">
+          <param name="movie" value="http://www.youtube.com/v/zqWMaBYvS9s" />
+          <param name="flashvars" value="controlbar=over&amp;image=video/M2U01045_part2.jpg&amp;file=video/M2U01045_part2.mp4" />
+          <img src="video/M2U01045_part2.jpg" width="352" height="288" alt="Peter Pan's Fort"
+               title="No video playback capabilities, sorry about that." />
+        </object>
+      </video>
+      <p class="caption">Daniela singing <em>Must Be Santa</em> at the school holiday show.</p>
     </article>
   </section>
   <section class="section" id="third">
     <article>
-      <h2><a name="third">Amusing Xmas Video #3</a></h2>
-      <video></video>
-      <p class="caption">Ho ho ho, that's a good one.</p>
+      <h2><a name="third">Good Night Song</a></h2>
+      <video width="352" height="288" controls preload>
+        <source src="video/video-2010-08-17-08-50-34.mp4" type="video/mp4" /><!-- WebKit video    -->
+        <source src="video/video-2010-08-17-08-50-34.ogv" type="video/ogg" /><!-- Firefox / Opera -->
+        <object width="425" height="344" type="application/x-shockwave-flash" data="http://www.youtube.com/v/zqWMaBYvS9s">
+          <param name="movie" value="http://www.youtube.com/v/zqWMaBYvS9s" />
+          <param name="flashvars" value="controlbar=over&amp;image=video/video-2010-08-17-08-50-34.jpg&amp;file=video/video-2010-08-17-08-50-34.mp4" />
+          <img src="video/video-2010-08-17-08-50-34.jpg" width="352" height="288" alt="Peter Pan's Fort"
+               title="No video playback capabilities, sorry about that." />
+        </object>
+      </video>
+      <p class="caption">Daniela and Shannon singing the <em>Good Night</em> song from <em>The Sound of Music</em>.</p>
     </article>
   </section>
   <section class="section" id="fourth">
     <article>
-      <h2><a name="fourth">Amusing Xmas Video #4</a></h2>
-      <video></video>
-      <p class="caption">Ho ho ho, that's a good one.</p>
+      <h2><a name="fourth">Chasing Bubbles</a></h2>
+      <video width="352" height="288" controls preload>
+        <source src="video/video-2010-10-18-13-48-38.mp4" type="video/mp4" /><!-- WebKit video    -->
+        <source src="video/video-2010-10-18-13-48-38.ogv" type="video/ogg" /><!-- Firefox / Opera -->
+        <object width="425" height="344" type="application/x-shockwave-flash" data="http://www.youtube.com/v/zqWMaBYvS9s">
+          <param name="movie" value="http://www.youtube.com/v/zqWMaBYvS9s" />
+          <param name="flashvars" value="controlbar=over&amp;image=video/video-2010-10-18-13-48-38.jpg&amp;file=video/video-2010-10-18-13-48-38.mp4" />
+          <img src="video/video-2010-10-18-13-48-38.jpg" width="352" height="288" alt="Peter Pan's Fort"
+               title="No video playback capabilities, sorry about that." />
+        </object>
+      </video>
+      <p class="caption">Daniela and Shannon playing with bubbles<br />in Arcata.</p>
     </article>
   </section>
   <section class="section" id="fifth">
     <article>
-      <h2><a name="fourth">Amusing Xmas Video #4</a></h2>
-      <video></video>
-      <p class="caption">Ho ho ho, that's a good one.</p>
+      <h2><a name="fourth">Truly Scrumptious</a></h2>
+      <video width="352" height="288" controls preload>
+        <source src="video/video-2010-11-07-20-25-55.mp4" type="video/mp4" /><!-- WebKit video    -->
+        <source src="video/video-2010-11-07-20-25-55.ogv" type="video/ogg" /><!-- Firefox / Opera -->
+        <object width="425" height="344" type="application/x-shockwave-flash" data="http://www.youtube.com/v/zqWMaBYvS9s">
+          <param name="movie" value="http://www.youtube.com/v/zqWMaBYvS9s" />
+          <param name="flashvars" value="controlbar=over&amp;image=video/video-2010-11-07-20-25-55.jpg&amp;file=video/video-2010-11-07-20-25-55.mp4" />
+          <img src="video/video-2010-11-07-20-25-55.jpg" width="352" height="288" alt="Peter Pan's Fort"
+               title="No video playback capabilities, sorry about that." />
+        </object>
+      </video>
+      <p class="caption">Shannon singing <em>Truly Scrumptious</em><br /> from <em>Chitty Chitty Bang Bang</em>.</p>
     </article>
   </section>
 </div>
