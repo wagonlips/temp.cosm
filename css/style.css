@@ -34,7 +34,7 @@ header, #content, footer {
 body {
     line-height:1;
     width:8192px;
-    background-image:url('/images/snowflakes-background.png');
+    background-image:url('../images/snowflakes-background.png');
     background-repeat:repeat-x;
     background-color:#38C5F3;
 }
@@ -109,7 +109,7 @@ input, select {
     end reset 
             *****/
 nav,header {
-    border:1px solid orange;
+    xborder:1px solid orange;
     width:500px;
     position:fixed;
 }
@@ -118,12 +118,21 @@ nav {
     margin-top:5px;
     display:block;
     overflow:hidden;
+    padding:10px 0;
 }
 
 nav a {
+    xborder:1px solid red;
     float:left;
     width:16%;
+    height:60px;
     text-align:center;
+    background:transparent url('../images/snowflake-link-background.png') no-repeat center 23px;
+    padding-top:20px;
+}
+
+nav a img {
+    xborder:1px solid green;
 }
 
 header {
@@ -158,7 +167,7 @@ article {
 }
 
 #bottom_image {
-    background-image:url('/images/snowy-landscape.png');
+    background-image:url('../images/snowy-landscape.png');
     background-repeat:repeat-x;
     position:absolute;
     bottom:0px;
