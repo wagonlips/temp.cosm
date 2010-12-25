@@ -235,3 +235,16 @@ article {
     padding:50px;
     z-index:9999;
 }
+
+.tooshort {
+    position:fixed;
+    display:none;
+    top:100px;
+    left:300px;
+    background:#f6b6b6;
+    border:5px solid #F00;
+    color:#000;
+    width:500px;
+    padding:50px;
+    z-index:9999;
+}
