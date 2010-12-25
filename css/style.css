@@ -129,6 +129,11 @@ nav a {
     height:60px;
     text-align:center;
     background:transparent url('../images/snowflake-link-background.png') no-repeat center 23px;
+    padding-top:35px;
+    text-decoration:none;
+}
+
+nav a#ahome {
     padding-top:20px;
 }
 
@@ -137,8 +142,13 @@ nav a img {
 }
 
 nav a span {
-    padding-top:50px;
-    border:1px solid green;
+    font-size:2em;
+    color:#2E9384;
+    xborder:1px solid green;
+}
+
+nav a:hover {
+    background-image:url('../images/snowflake-link-background-over.png');
 }
 
 header {
