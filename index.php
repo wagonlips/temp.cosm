@@ -1,9 +1,12 @@
 <?php
-$iphone = strpos($_SERVER['HTTP_USER_AGENT'],”iPhone”);
-$android = strpos($_SERVER['HTTP_USER_AGENT'],”Android”);
-$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],”webOS”);
-$ipod = strpos($_SERVER['HTTP_USER_AGENT'],”iPod”);
-if(!$iphone && !$android && !$palmpre && !$ipod) { ?>
+$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
+$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+if($iphone || $android || $palmpre || $ipod) { 
+header( 'Location:http://thecamdenfamily.com/stuff/xmas2010/small_device.php' );
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -231,25 +234,3 @@ piwikTracker.enableLinkTracking();
 </div>
 </body>
 </html>
-<?php } else { ?>
-<html>
-<head>
-<title>Merry Xmas</title>
-</head>
-<body>
-<p>Sorry, I know mobile's all the rage these days, but the Camden Xmas card is just too heavy for your little device. But Merry Xmas anyways!</p>
-<!-- Piwik -->
-<script type="text/javascript">
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.seancamden.com/stats/piwik/" : "http://www.seancamden.com/stats/piwik/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript">
-try {
-var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
-piwikTracker.trackPageView();
-piwikTracker.enableLinkTracking();
-} catch( err ) {}
-</script><noscript><p><img src="http://www.seancamden.com/stats/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
-<!-- End Piwik Tag -->
-</body>
-</html>
-<?php } ?>
