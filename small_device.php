@@ -8,8 +8,9 @@
 <body>
 <div id="mycontent">
 <p>It seems you've arrived here via a phone of some sort. That's cool. I dig where you're coming from. It's just that the card is all jammed full of 
-  pictures and movies, so you'd just run through your monthly quota before actually seeing anything. So, I'll just stack the reduced images up here so you can see
-  them, and I'll list the youtube links for the videos below. There's a much nicer presentation if you come back while on a device with a proper sized monitor.</p>
+  pictures and movies and rollovers and a clever side-scrolling format resplendent in jQuery animation, most of which would be completely lost on this
+  tiny screen. So, I'll just stack the reduced images up here so you can see them, and I'll list the youtube links for the videos below. 
+  There's a much nicer presentation if you come back while on a device with a proper sized monitor.</p>
 <a href="images/IMG_5281.jpg"><img src="images/mobile/IMG_5281.jpg" width="400" height="150" alt="Daniela, Shannon, and Mommy" title="Daniela, Shannon, and Mommy" /></a><br />
 <a href="images/2010-12-15-16.11.54.jpg"><img src="images/mobile/2010-12-15-16.11.54.jpg" width="400" height="150" alt="Daniela" title="Daniela" /></a><br />
 <a href="images/2010-12-20-14.38.18.jpg"><img src="images/mobile/2010-12-20-14.38.18.jpg" width="400" height="150" alt="Shannon" title="Shannon" /></a><br />
