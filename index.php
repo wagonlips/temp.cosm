@@ -1,3 +1,9 @@
+<?php
+$iphone = strpos($_SERVER['HTTP_USER_AGENT'],”iPhone”);
+$android = strpos($_SERVER['HTTP_USER_AGENT'],”Android”);
+$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],”webOS”);
+$ipod = strpos($_SERVER['HTTP_USER_AGENT'],”iPod”);
+if(!$iphone && !$android && !$palmpre && !$ipod) { ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -223,5 +229,14 @@ piwikTracker.enableLinkTracking();
 <div class="tooshort">
   <p>Oh no! Your browser window is too short! Try stretching the window bigger, closing some toolbars, or getting a bigger monitor and reloading.</p>
 </div>
+</body>
+</html>
+<?php } else { ?>
+<html>
+<head>
+<title>Merry Xmas</title>
+</head>
+<body>
+<p>Sorry, I know mobile's all the rage these days, but the Camden Xmas card is just too heavy for your little device. But Merry Xmas anyways!</p>
 </body>
 </html>
