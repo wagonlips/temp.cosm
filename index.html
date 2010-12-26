@@ -208,19 +208,18 @@ $(document).ready(function() {
 <footer>
 </footer>
 <div id="bottom_image">&nbsp;</div>
-<!-- Piwik plugin active -->
+<!-- Piwik -->
 <script type="text/javascript">
-var pkBaseURL = document.location.protocol + "//" + "seancamden.com" + "/stats/piwik/";
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.seancamden.com/stats/piwik/" : "http://www.seancamden.com/stats/piwik/");
 document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 </script><script type="text/javascript">
 try {
-        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
-        piwikTracker.setDocumentTitle(document.title);
-        piwikTracker.trackPageView();
-        piwikTracker.enableLinkTracking();
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
 } catch( err ) {}
-</script>
-<!-- /Piwik -->
+</script><noscript><p><img src="http://www.seancamden.com/stats/piwik/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
 <div class="tooshort">
   <p>Oh no! Your browser window is too short! Try stretching the window bigger, closing some toolbars, or getting a bigger monitor and reloading.</p>
 </div>
